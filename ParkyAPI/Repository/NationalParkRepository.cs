@@ -36,7 +36,7 @@ namespace ParkyAPI.Repository
 
         public ICollection<NationalPark> GetNationalParks()
         {
-            throw new NotImplementedException();
+            return _db.NationalParks.OrderBy(a => a.Name).ToList();
         }
 
         public bool NationalParkExists(string name)
